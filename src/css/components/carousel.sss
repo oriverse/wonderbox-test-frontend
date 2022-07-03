@@ -1,0 +1,50 @@
+.product-pagination
+  text-align: center
+  z-index: 10
+  transition: opacity .3s
+  position: absolute
+  bottom: 1.2rem
+  transform: translate3d(0, 0, 0)
+  @media (--vp-tablet)
+    display: none
+  &.swiper-pagination-bullets.swiper-pagination-horizontal
+    bottom: 0.2rem
+  & .swiper-pagination-bullet
+    border: 2px solid var(--grey-100)
+    background: var(--white)
+    @mixin size 1.6em, 1.6rem
+  & .swiper-pagination-bullet-active
+    border: none
+    background: var(--grey-100)
+
+.product-button-prev,
+.product-button-next,
+.hero-button-prev,
+.hero-button-next
+  display: none
+  @media (--vp-tablet)
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    z-index: 1
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: var(--white)
+    border: 1px solid var(--grey-20)
+    border-radius: 0.6rem
+    box-shadow: 0 0.1rem 0.2rem var(--grey-60)
+    cursor: pointer
+    @mixin size 4.2rem, 6.2rem
+  &.swiper-button-disabled
+    opacity: 0.5
+  & svg
+    @mixin size 1.8rem, 2.6rem
+
+.product-button-prev,
+.hero-button-prev
+  left: 1.2rem
+
+.product-button-next,
+.hero-button-next
+  right: 1.2rem

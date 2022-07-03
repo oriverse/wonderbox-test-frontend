@@ -1,0 +1,120 @@
+@block footer
+  background-color: var(--grey-100)
+  color: var(--white)
+  @media (--vp-tablet)
+    padding-bottom: 2.4rem
+  @element container
+    @mixin container 128rem
+  @element lists
+    padding: 0
+    display: flex
+    flex-direction: column
+    @media (--vp-tablet)
+      padding: 2.8rem 1.2rem 0
+      flex-direction: row
+      justify-content: flex-end
+      flex-wrap: wrap
+    @media (--vp-desktop)
+      padding: 4rem 2.8rem 0
+  @element list
+    padding: 1.6rem
+    flex: 1
+    border-bottom: 1px solid var(--grey-80)
+    @media (--vp-tablet)
+      flex: 1 1 25%
+      border: none
+    &:last-child
+      @media (--vp-tablet)
+        flex: 0 1 25%
+        margin-top: -8rem
+    & li
+      font-size: 1.4rem
+      font-weight: 500
+      @media (--vp-tablet)
+        font-size: 1.2rem
+    & a
+      margin-bottom: 1.6rem
+      display: inline-block
+      color: var(--grey-40)
+      @media (--vp-tablet)
+        margin-bottom: 1rem
+      &:hover,
+      &:active,
+      &:focus,
+      &:focus-visible
+        color: var(--primary)
+  @element category
+    margin-bottom: 1.6rem
+    font-size: 2rem
+    @media (--vp-tablet)
+      margin-bottom: 1.8rem
+      font-size: 1.8rem
+  @element legal
+    @media (--vp-tablet)
+      text-align: center
+
+.legal__links
+  padding: 0.8rem 0
+  @media (--vp-tablet)
+    display: inline-block
+  & li
+    padding: 0.8rem 1.6rem
+    font-size: 1.4rem
+    @media (--vp-tablet)
+      padding: 0 0.3rem
+      display: inline-block
+      font-size: 1.2rem
+    &:not(:first-child):before
+      content: ''
+      @media (--vp-tablet)
+        content: '•'
+        margin-right: 0.6rem
+  & a
+    color: var(--white)
+    &:hover,
+    &:active,
+    &:focus,
+    &:focus-visible
+      color: var(--primary)
+
+.copyright
+  padding: 0.8rem 1.6rem 2.4rem
+  display: block
+  text-align: center
+  font-size: 1.4rem
+  @media (--vp-tablet)
+    padding: 0.8rem 0
+    font-size: 1.2rem
+
+@block payments
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  width: 100%
+  max-width: calc((4.8rem * 4) + (1rem * 3))
+  & li:last-child
+    & a
+      color: var(--white)
+      &:hover,
+      &:active,
+      &:focus,
+      &:focus-visible
+        color: var(--primary)
+
+  @element item
+    flex: 0 1 4.8rem
+    & a
+      opacity: 0.6
+      &:hover,
+      &:focus,
+      &:focus-visible
+        opacity: 1
+    & img
+      border-radius: 0.4rem
+
+.languages
+  margin-top: -0.8rem
+  max-width: 11.7rem
+  display: block
+  @media (--vp-tablet)
+    margin-top: -1.4rem

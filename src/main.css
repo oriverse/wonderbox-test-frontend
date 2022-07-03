@@ -1,0 +1,14 @@
+body {
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+.logo {
+  background: image-set(url("assets/logo.png") 2x, url("assets/logo.png") 1x);
+}
+
+.button {
+  transition: background 200ms;
+}

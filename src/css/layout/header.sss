@@ -1,0 +1,86 @@
+@block header
+  background-color: var(--black)
+  position: fixed
+  top: 0
+  z-index: 10
+  width: 100%
+  @element container
+    padding: 0.8rem 1.6rem
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    @mixin container 128rem
+    @media (--vp-desktop)
+      padding: 0.7rem 4.3rem 1.1rem
+      justify-content: space-between
+
+@block logo
+  flex: 1
+  justify-self: flex-start
+  @media (--vp-desktop)
+    flex: 0 1 auto
+    justify-self: unset
+  @element img
+    width: auto
+
+@block search
+  @media (--vp-desktop)
+    flex: 0 1 480px
+  & form
+    @media (--vp-desktop)
+      position: relative
+      display: flex
+      align-items: center
+  @element input
+    display: none
+    @media (--vp-desktop)
+      display: block
+      padding-left: 4.4rem
+      font-size: 1.4rem
+      font-weight: 500
+      border: 1px solid var(--light)
+      border-radius: 4rem
+      @mixin size 100%, 4rem
+  @element button
+    flex: 0 1 auto
+    padding: 1.6rem 0.8rem
+    line-height: 0
+    background: none
+    color: var(--white)
+    @media (--vp-desktop)
+      position: absolute
+      top: 0
+      left: 0
+      padding: 0
+      color: var(--grey-60)
+      @mixin size 4.4rem, 4rem
+    &:hover,
+    &:focus
+      color: var(--primary)
+      @media (--vp-desktop)
+        color: var(--grey-80)
+  & svg
+    @mixin size 2rem, 2rem
+
+@block tools
+  @element nav
+    height: 100%
+  @element list
+    height: 100%
+    display: flex
+  @element item
+    display: flex
+    flex-direction: column
+    justify-content: center
+  @element link
+    flex: 0 1 auto
+    padding: 1.6rem 0.8rem
+    line-height: 0
+    color: var(--white)
+    @media (--vp-desktop)
+      padding: 1.6rem
+    &:hover,
+    &:focus
+      color: var(--primary)
+  & svg
+    @mixin size 2rem, 2rem

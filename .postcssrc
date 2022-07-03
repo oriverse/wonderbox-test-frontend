@@ -1,0 +1,25 @@
+{
+  "plugins": {
+    "postcss-import": {},
+    "postcss-url": {},
+    "postcss-custom-properties": {},
+    "postcss-custom-selectors": {},
+    "postcss-atrule-bem": {},
+    "postcss-mixins": {
+      "mixinsDir": "./src/css/utils/"
+    },
+    "postcss-font-magician": {
+      "variants": {
+        "Roboto": {
+          "300": [],
+          "400": [],
+          "500": [],
+          "700": []
+        }
+      },
+      "foundries": [
+        "google"
+      ]
+    }
+  }
+}

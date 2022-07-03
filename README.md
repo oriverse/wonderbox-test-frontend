@@ -20,7 +20,7 @@
   - **Versionning et outil de dépot :** Git.
 
 ## Détail du projet
-Le projet ayant été crée avec [**Yarn**](https://yarnpkg.com/), il est d'abord important de bien télécharger les dépendances en utilisant la commande `yarn` à la racine du projet, après l'avoir téléchargé.
+Le projet ayant été crée avec [**Yarn**](https://yarnpkg.com/), il est d'abord important de bien télécharger les dépendances en utilisant la commande `yarn install` à la racine du projet, après l'avoir téléchargé.
 De plus, le projet dispose de 2 commandes importantes à utiliser à la racine :
   - `yarn run start` pour lancer le projet sur un environnement de développement qui prendra tous les fichiers compris dans le dossier `src`.
   - `yarn run build` qui compilera le projet et compressera les fichiers dans un dossier `dist` à la racine.
